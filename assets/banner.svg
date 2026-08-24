@@ -1,0 +1,77 @@
+<svg width="1200" height="300" viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e1a"/>
+      <stop offset="55%" stop-color="#0f1524"/>
+      <stop offset="100%" stop-color="#0a0e1a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+    <linearGradient id="scanBeam" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#fbbf24" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#fbbf24" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="82%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="300" fill="url(#bg)"/>
+  <rect width="1200" height="300" fill="url(#glow)"/>
+
+  <!-- eyebrow -->
+  <text x="70" y="66" font-family="Arial, sans-serif" font-size="13" letter-spacing="4" fill="#f59e0b" font-weight="600">WEEK 03 · DOCUMENT AI &amp; CONTEXT ENGINEERING</text>
+
+  <!-- title -->
+  <text x="68" y="126" font-family="Arial, sans-serif" font-size="48" font-weight="800" fill="#f8fafc">AI PDF Assistant</text>
+
+  <rect x="70" y="148" width="190" height="4" rx="2" fill="url(#accent)"/>
+
+  <!-- subtitle -->
+  <text x="70" y="186" font-family="Arial, sans-serif" font-size="16" fill="#94a3b8">Upload a document, ask a question, get an answer grounded in the source.</text>
+
+  <!-- feature row -->
+  <g font-family="'Courier New', monospace" font-size="12.5" fill="#cbd5e1">
+    <text x="70" y="228">PDF Extraction</text>
+    <circle cx="192" cy="224" r="2" fill="#f59e0b" opacity="0.6"/>
+    <text x="207" y="228">Chunking</text>
+    <circle cx="296" cy="224" r="2" fill="#f59e0b" opacity="0.6"/>
+    <text x="311" y="228">Grounded Q&amp;A</text>
+    <circle cx="435" cy="224" r="2" fill="#f59e0b" opacity="0.6"/>
+    <text x="450" y="228">Hallucination Control</text>
+  </g>
+
+  <!-- Signature visual: document with an amber "scan beam" sweeping across
+       text lines and landing on the one that becomes the highlighted answer -->
+  <g transform="translate(870, 42)">
+    <!-- page -->
+    <rect x="0" y="0" width="200" height="220" rx="10" fill="#0f1524" stroke="#f59e0b" stroke-opacity="0.35" stroke-width="1.5"/>
+
+    <!-- scan beam sweeping across -->
+    <rect x="8" y="30" width="184" height="34" fill="url(#scanBeam)"/>
+
+    <!-- text lines -->
+    <rect x="24" y="34" width="152" height="6" rx="3" fill="#475569"/>
+    <rect x="24" y="52" width="120" height="6" rx="3" fill="#475569"/>
+    <rect x="24" y="76" width="152" height="6" rx="3" fill="#475569"/>
+    <rect x="24" y="94" width="90" height="6" rx="3" fill="#475569"/>
+
+    <!-- the "found" line — highlighted -->
+    <rect x="18" y="116" width="164" height="20" rx="5" fill="#f59e0b" fill-opacity="0.18" stroke="#f59e0b" stroke-width="1.2"/>
+    <rect x="26" y="122" width="130" height="7" rx="3.5" fill="#fbbf24"/>
+
+    <rect x="24" y="150" width="140" height="6" rx="3" fill="#475569"/>
+    <rect x="24" y="168" width="100" height="6" rx="3" fill="#475569"/>
+    <rect x="24" y="186" width="152" height="6" rx="3" fill="#475569"/>
+
+    <!-- magnifier pointing at highlighted line -->
+    <circle cx="184" cy="126" r="16" fill="#0a0e1a" stroke="#fbbf24" stroke-width="2.5"/>
+    <line x1="195" y1="137" x2="206" y2="148" stroke="#fbbf24" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <rect x="0" y="298" width="1200" height="2" fill="url(#accent)" opacity="0.5"/>
+</svg>
