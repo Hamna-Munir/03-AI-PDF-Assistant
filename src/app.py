@@ -8,6 +8,15 @@ with working pages (PDF Assistant / Document History / Chunk Explorer),
 chat-style bottom input bar for asking questions about the uploaded PDF.
 """
 
+import sys
+import os
+
+# Streamlit Cloud runs this file with only its own directory (src/) on
+# sys.path, not the repo root — so "from src.X import Y" fails there
+# even though it works locally. Adding the repo root fixes it in both
+# environments.
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import streamlit as st
 from src.pdf_reader import extract_text_from_pdf, is_pdf_readable
 from src.chunking import chunk_text, select_relevant_chunks
